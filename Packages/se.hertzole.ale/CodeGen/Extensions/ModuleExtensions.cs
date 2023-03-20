@@ -176,7 +176,6 @@ namespace Hertzole.ALE.CodeGen
 		public static MethodReference GetConstructor(this ModuleDefinition module, Type type, params Type[] parameters)
 		{
 			MethodReference result = module.ImportReference(type.GetConstructor(parameters));
-
 			if (result == null)
 			{
 				throw new ArgumentException($"There's no constructor with those parameters in type {type.FullName}");
