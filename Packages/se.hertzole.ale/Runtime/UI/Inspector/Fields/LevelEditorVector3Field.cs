@@ -178,17 +178,17 @@ namespace Hertzole.ALE
 
             if (IsInt)
             {
-                if (!int.TryParse(_x, out int x))
+                if (!int.TryParse(_x, out int x, new CultureInfo("en-US")))
                 {
                     x = 0;
                 }
 
-                if (!int.TryParse(_y, out int y))
+                if (!int.TryParse(_y, out int y, new CultureInfo("en-US")))
                 {
                     y = 0;
                 }
 
-                if (!int.TryParse(_z, out int z))
+                if (!int.TryParse(_z, out int z, new CultureInfo("en-US")))
                 {
                     z = 0;
                 }
@@ -216,17 +216,17 @@ namespace Hertzole.ALE
             }
             else
             {
-                if (!float.TryParse(_x, out float x))
+                if (!float.TryParse(_x, out float x, new CultureInfo("en-US")))
                 {
                     x = 0;
                 }
 
-                if (!float.TryParse(_y, out float y))
+                if (!float.TryParse(_y, out float y, new CultureInfo("en-US")))
                 {
                     y = 0;
                 }
 
-                if (!float.TryParse(_z, out float z))
+                if (!float.TryParse(_z, out float z, new CultureInfo("en-US")))
                 {
                     z = 0;
                 }

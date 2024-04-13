@@ -279,21 +279,21 @@ namespace Hertzole.ALE
                 case NumberType.Float:
                     ParseValue<float, float>(stringValue, float.MinValue, float.MaxValue, CHARACTER_LIMIT_FLOAT, endEdit, x =>
                     {
-                        bool canParse = float.TryParse(x, out float result);
+                        bool canParse = float.TryParse(x, out float result, new CultureInfo("en-US"));
                         return (canParse, result);
                     });
                     break;
                 case NumberType.Double:
                     ParseValue<double, double>(stringValue, double.MinValue, double.MaxValue, CHARACTER_LIMIT_DOUBLE, endEdit, x =>
                     {
-                        bool canParse = double.TryParse(x, out double result);
+                        bool canParse = double.TryParse(x, out double result, new CultureInfo("en-US"));
                         return (canParse, result);
                     });
                     break;
                 case NumberType.Decimal:
                     ParseValue<decimal, decimal>(stringValue, decimal.MinValue, decimal.MaxValue, CHARACTER_LIMIT_DECIMAL, endEdit, x =>
                     {
-                        bool canParse = decimal.TryParse(x, out decimal result);
+                        bool canParse = decimal.TryParse(x, out decimal result, new CultureInfo("en-US"));
                         return (canParse, result);
                     });
                     break;
@@ -304,13 +304,13 @@ namespace Hertzole.ALE
 
             static (bool, long) LongParse(string x)
             {
-                bool canParse = long.TryParse(x, out long result);
+                bool canParse = long.TryParse(x, out long result, new CultureInfo("en-US"));
                 return (canParse, result);
             }
 
             static (bool, ulong) ULongParse(string x)
             {
-                bool canParse = ulong.TryParse(x, out ulong result);
+                bool canParse = ulong.TryParse(x, out ulong result, new CultureInfo("en-US"));
                 return (canParse, result);
             }
         }
