@@ -216,17 +216,17 @@ namespace Hertzole.ALE
             }
             else
             {
-                if (!float.TryParse(_x NumberStyles.Float, CultureInfo.InvariantCulture, out float x)
+                if (!float.TryParse(_x, NumberStyles.Float, CultureInfo.InvariantCulture, out float x))
                 {
                     x = 0;
                 }
 
-                if (!float.TryParse(_y NumberStyles.Float, CultureInfo.InvariantCulture, out float y)
+                if (!float.TryParse(_y, NumberStyles.Float, CultureInfo.InvariantCulture, out float y))
                 {
                     y = 0;
                 }
 
-                if (!float.TryParse(_z NumberStyles.Float, CultureInfo.InvariantCulture, out float z)
+                if (!float.TryParse(_z, NumberStyles.Float, CultureInfo.InvariantCulture, out float z))
                 {
                     z = 0;
                 }
