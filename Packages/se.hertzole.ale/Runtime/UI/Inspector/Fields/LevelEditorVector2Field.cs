@@ -158,12 +158,12 @@ namespace Hertzole.ALE
 
             if (IsInt)
             {
-                if (!int.TryParse(_x, out int x, new CultureInfo("en-US")))
+                if (!int.TryParse(_x, out int x)
                 {
                     x = 0;
                 }
 
-                if (!int.TryParse(_y, out int y, new CultureInfo("en-US")))
+                if (!int.TryParse(_y, out int y)
                 {
                     y = 0;
                 }
@@ -191,12 +191,12 @@ namespace Hertzole.ALE
             }
             else
             {
-                if (!float.TryParse(_x, out float x, new CultureInfo("en-US")))
+                if (!float.TryParse(_x, NumberStyles.Float, CultureInfo.InvariantCulture, out float x))
                 {
                     x = 0;
                 }
 
-                if (!float.TryParse(_y, out float y, new CultureInfo("en-US")))
+                if (!float.TryParse(_y, NumberStyles.Float, CultureInfo.InvariantCulture, out float y))
                 {
                     y = 0;
                 }

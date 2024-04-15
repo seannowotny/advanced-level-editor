@@ -20,7 +20,7 @@ namespace Hertzole.ALE
         
         public static bool TryParseFloatInternational(this string s, out float result)
         {
-            return float.TryParse(s, NumberStyles.Float | NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands, CultureInfo.InvariantCulture, out result, new CultureInfo("en-US"));
+            return float.TryParse(s, NumberStyles.Float | NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands, CultureInfo.InvariantCulture, out result);
         }
 
         public static float ParseFloatInternational(this string s)
