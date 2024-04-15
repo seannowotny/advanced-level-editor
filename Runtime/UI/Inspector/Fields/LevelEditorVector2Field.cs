@@ -11,6 +11,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Globalization;
 
 namespace Hertzole.ALE
 {
