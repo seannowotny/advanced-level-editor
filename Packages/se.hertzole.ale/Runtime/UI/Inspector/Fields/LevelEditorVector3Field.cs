@@ -178,17 +178,17 @@ namespace Hertzole.ALE
 
             if (IsInt)
             {
-                if (!int.TryParse(_x, out int x, new CultureInfo("en-US")))
+                if (!int.TryParse(_x, out int x))
                 {
                     x = 0;
                 }
 
-                if (!int.TryParse(_y, out int y, new CultureInfo("en-US")))
+                if (!int.TryParse(_y, out int y))
                 {
                     y = 0;
                 }
 
-                if (!int.TryParse(_z, out int z, new CultureInfo("en-US")))
+                if (!int.TryParse(_z, out int z))
                 {
                     z = 0;
                 }
