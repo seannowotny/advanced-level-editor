@@ -280,21 +280,21 @@ namespace Hertzole.ALE
                 case NumberType.Float:
                     ParseValue<float, float>(stringValue, float.MinValue, float.MaxValue, CHARACTER_LIMIT_FLOAT, endEdit, x =>
                     {
-                        bool canParse = float.TryParse(x, out float result, new CultureInfo("en-US"));
+                        bool canParse = float.TryParse(x, NumberStyles.Float, CultureInfo.InvariantCulture, out float result);
                         return (canParse, result);
                     });
                     break;
                 case NumberType.Double:
                     ParseValue<double, double>(stringValue, double.MinValue, double.MaxValue, CHARACTER_LIMIT_DOUBLE, endEdit, x =>
                     {
-                        bool canParse = double.TryParse(x, out double result, new CultureInfo("en-US"));
+                        bool canParse = double.TryParse(x, NumberStyles.Float, CultureInfo.InvariantCulture, out double result);
                         return (canParse, result);
                     });
                     break;
                 case NumberType.Decimal:
                     ParseValue<decimal, decimal>(stringValue, decimal.MinValue, decimal.MaxValue, CHARACTER_LIMIT_DECIMAL, endEdit, x =>
                     {
-                        bool canParse = decimal.TryParse(x, out decimal result, new CultureInfo("en-US"));
+                        bool canParse = decimal.TryParse(x, NumberStyles.Float, CultureInfo.InvariantCulture, out decimal result);
                         return (canParse, result);
                     });
                     break;
@@ -305,13 +305,13 @@ namespace Hertzole.ALE
 
             static (bool, long) LongParse(string x)
             {
-                bool canParse = long.TryParse(x, out long result, new CultureInfo("en-US"));
+                bool canParse = long.TryParse(x, NumberStyles.Float, CultureInfo.InvariantCulture, out long result);
                 return (canParse, result);
             }
 
             static (bool, ulong) ULongParse(string x)
             {
-                bool canParse = ulong.TryParse(x, out ulong result, new CultureInfo("en-US"));
+                bool canParse = ulong.TryParse(x, NumberStyles.Float, CultureInfo.InvariantCulture, out ulong result);
                 return (canParse, result);
             }
         }
