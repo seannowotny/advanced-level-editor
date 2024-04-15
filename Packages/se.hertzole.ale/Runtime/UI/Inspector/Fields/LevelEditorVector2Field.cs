@@ -158,12 +158,12 @@ namespace Hertzole.ALE
 
             if (IsInt)
             {
-                if (!int.TryParse(_x, out int x)
+                if (!int.TryParse(_x, out int x))
                 {
                     x = 0;
                 }
 
-                if (!int.TryParse(_y, out int y)
+                if (!int.TryParse(_y, out int y))
                 {
                     y = 0;
                 }
